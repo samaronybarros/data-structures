@@ -13,6 +13,8 @@ export class LinkedList<T> {
     return { element, next: null }
   }
 
+  public getLength = () => this.length
+
   public addToLast = (element: T) => {
     const node = this.Node(element)
 
@@ -30,8 +32,6 @@ export class LinkedList<T> {
 
     this.length++
   }
-
-  public getLength = () => this.length
 
   public addToHead = (element: T) => {
     const node = this.Node(element)
@@ -79,6 +79,12 @@ export class LinkedList<T> {
       return
     }
 
+    if (this.length <= 1) {
+      this.head = null
+      this.length = 0
+      return
+    }
+
     let last = this.head
 
     while (last.next) {
@@ -92,6 +98,10 @@ export class LinkedList<T> {
   }
 
   removeFromHead = () => {
+    if (this.head === null) {
+      return
+    }
+
     if (this.length <= 1) {
       this.head = null
       this.length = 0
@@ -130,6 +140,10 @@ export class LinkedList<T> {
       }
 
       list = list.next
+    }
+
+    if (previous && list?.element === element) {
+      previous.next = list.next
     }
 
     this.length--
@@ -184,6 +198,10 @@ export class LinkedList<T> {
 
   public reverse = () => {
     if (this.head === null) {
+      return
+    }
+
+    if (this.length <= 1) {
       return
     }
 
