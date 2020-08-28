@@ -22,6 +22,6 @@
     "start": "npm run build && node bin/index.js",
     "start:dev": "nodemon",
     "build": "rimraf ./bin && tsc",
-    "test": "yarn mocha ./src/linked-list.test.ts"
+    "test": "yarn build && yarn mocha ./bin/src/test/*.test.js"
   }
 }
