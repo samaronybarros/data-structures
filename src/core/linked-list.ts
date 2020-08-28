@@ -31,6 +31,8 @@ export class LinkedList<T> {
     this.length++
   }
 
+  public getLength = () => this.length
+
   public addToHead = (element: T) => {
     const node = this.Node(element)
 
@@ -74,19 +76,17 @@ export class LinkedList<T> {
     let previous
 
     if (this.head === null) {
-      this.head = null
-      this.length = 0
       return
-    } else {
-      let last = this.head
-
-      while (last.next) {
-        previous = last
-        last = last.next
-      }
-
-      previous.next = null
     }
+
+    let last = this.head
+
+    while (last.next) {
+      previous = last
+      last = last.next
+    }
+
+    previous.next = null
 
     this.length--
   }
@@ -96,42 +96,40 @@ export class LinkedList<T> {
       this.head = null
       this.length = 0
       return
-    } else {
-      let node = this.head?.next
-      this.head = node!
     }
+
+    let node = this.head?.next
+    this.head = node!
 
     this.length--
   }
 
   public removeFirstElementFoundFromList = (element: T) => {
     if (this.head === null) {
-      this.head = null
-      this.length = 0
       return
-    } else {
-      let list = this.head
-      let previous: NodeOrNull<T> = null
+    }
 
-      if (list && list.element === element) {
-        this.head = list.next!
-        this.length--
-        return
+    let list = this.head
+    let previous: NodeOrNull<T> = null
+
+    if (list?.element === element) {
+      this.head = list.next!
+      this.length--
+      return
+    }
+
+    while (list.next) {
+      let currentNode = list
+      if (currentNode?.element !== element) {
+        previous = currentNode
       }
 
-      while (list.next) {
-        let currentNode = list
-        if (currentNode?.element !== element) {
-          previous = currentNode
-        }
-
-        if (currentNode?.element === element && previous !== null) {
-          previous.next = currentNode.next
-          break
-        }
-
-        list = list.next
+      if (currentNode?.element === element && previous !== null) {
+        previous.next = currentNode.next
+        break
       }
+
+      list = list.next
     }
 
     this.length--
@@ -139,8 +137,6 @@ export class LinkedList<T> {
 
   public removeAllElementsFromList = (element: T) => {
     if (this.head === null) {
-      this.head = null
-      this.length = 0
       return
     }
 
