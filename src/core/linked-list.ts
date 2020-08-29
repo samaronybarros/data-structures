@@ -85,7 +85,7 @@ export class LinkedList<T> extends List<T> {
     this.length--
   }
 
-  removeFromHead = () => {
+  public removeFromHead = () => {
     if (this.head === null) {
       return
     }
