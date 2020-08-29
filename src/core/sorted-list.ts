@@ -1,20 +1,6 @@
-interface INode<T> {
-  element: T
-  next: INode<T> | null
-}
+import { List, NodeOrNull } from './list'
 
-type NodeOrNull<T> = INode<T> | null
-
-export class SortedList<T> {
-  private length = 0
-  private head: NodeOrNull<T> = null
-
-  private Node(element: T): INode<T> {
-    return { element, next: null }
-  }
-
-  public getLength = () => this.length
-
+export class SortedList<T> extends List<T> {
   public add(element: T) {
     const node = this.Node(element)
 
@@ -176,33 +162,5 @@ export class SortedList<T> {
       previous.next = list.next
       this.length--
     }
-  }
-
-  public search = (element) => {
-    let list = this.head
-    if (list !== null) {
-      let position = 0
-      while (list) {
-        if (list.element === element) {
-          return position
-        }
-        position++
-        list = list.next!
-      }
-    }
-    return -1
-  }
-
-  public print = () => {
-    let list = this.head
-
-    process.stdout.write(`[${this.length}]  `)
-
-    while (list) {
-      process.stdout.write(`${list.element}  `)
-      list = list.next!
-    }
-
-    process.stdout.write(`\n`)
   }
 }

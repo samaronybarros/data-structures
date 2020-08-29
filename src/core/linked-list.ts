@@ -1,3 +1,5 @@
+import { List } from './list'
+
 interface INode<T> {
   element: T
   next: INode<T> | null
@@ -5,14 +7,7 @@ interface INode<T> {
 
 type NodeOrNull<T> = INode<T> | null
 
-export class LinkedList<T> {
-  private length = 0
-  private head: NodeOrNull<T> = null
-
-  private Node = (element: T): INode<T> => {
-    return { element, next: null }
-  }
-
+export class LinkedList<T> extends List<T> {
   public getLength = () => this.length
 
   public addToLast = (element: T) => {
@@ -181,21 +176,6 @@ export class LinkedList<T> {
     }
   }
 
-  public search = (element) => {
-    let list = this.head
-    if (list !== null) {
-      let position = 0
-      while (list) {
-        if (list.element === element) {
-          return position
-        }
-        position++
-        list = list.next!
-      }
-    }
-    return -1
-  }
-
   public reverse = () => {
     if (this.head === null) {
       return
@@ -219,33 +199,8 @@ export class LinkedList<T> {
     this.head = previousNode
   }
 
-  public isEmpty = () => !this.length
-
-  public toArray = (): T[] => {
-    const result: T[] = []
-    let node = this.head
-    while (node) {
-      result.push(node.element)
-      node = node.next!
-    }
-    return result
-  }
-
   public fromArray = (elements: T[]): LinkedList<T> => {
     elements.forEach((el: T) => this.addToLast(el))
     return this
-  }
-
-  public print = () => {
-    let list = this.head
-
-    process.stdout.write(`[${this.length}]  `)
-
-    while (list) {
-      process.stdout.write(`${list.element}  `)
-      list = list.next!
-    }
-
-    process.stdout.write(`\n`)
   }
 }
