@@ -5,71 +5,62 @@ interface INode<T> {
 
 type NodeOrNull<T> = INode<T> | null
 
-export class LinkedList<T> {
+export class SortedList<T> {
   private length = 0
   private head: NodeOrNull<T> = null
 
-  private Node = (element: T): INode<T> => {
+  private Node(element: T): INode<T> {
     return { element, next: null }
   }
 
   public getLength = () => this.length
 
-  public addToLast = (element: T) => {
+  public add(element: T) {
     const node = this.Node(element)
 
     if (this.head === null) {
       this.head = node
-    } else {
-      let currentNode = this.head
+      this.length++
+      return
+    }
 
-      while (currentNode.next) {
-        currentNode = currentNode.next
+    let currentNode = this.head
+
+    if (this.length === 1) {
+      if (element > currentNode.element) {
+        this.head.next = node
+        this.length++
+        return
       }
 
-      currentNode.next = node
-    }
-
-    this.length++
-  }
-
-  public addToHead = (element: T) => {
-    const node = this.Node(element)
-
-    if (this.head === null) {
-      this.head = node
-    } else {
       node.next = this.head
       this.head = node
-    }
-
-    this.length++
-  }
-
-  public addElementAtPosition = (element: T, position: number) => {
-    let previous
-
-    if (position > this.length) {
+      this.length++
       return
     }
 
-    if (position === 0) {
-      this.addToHead(element)
+    if (element < currentNode.element) {
+      this.head = node
+      node.next = currentNode
+      this.length++
       return
     }
 
-    const node = this.Node(element)
-    let list = this.head
+    while (currentNode.next) {
+      if (element >= currentNode.element && element <= currentNode.next.element) {
+        const next = currentNode.next
+        currentNode.next = node
+        node.next = next
+        this.length++
+        return
+      }
 
-    while (position--) {
-      previous = list
-      list = list?.next!
+      currentNode = currentNode.next
     }
 
-    node.next = list
-    previous.next = node
-
+    currentNode.next = node
     this.length++
+    return
   }
 
   public removeFromLast = () => {
@@ -109,7 +100,7 @@ export class LinkedList<T> {
     }
 
     let node = this.head?.next
-    this.head = node!
+    this.head = node
 
     this.length--
   }
@@ -122,19 +113,19 @@ export class LinkedList<T> {
     let list = this.head
     let previous: NodeOrNull<T> = null
 
-    if (list?.element === element) {
-      this.head = list.next!
+    if (list.element === element) {
+      this.head = list.next
       this.length--
       return
     }
 
     while (list.next) {
       let currentNode = list
-      if (currentNode?.element !== element) {
+      if (currentNode.element !== element) {
         previous = currentNode
       }
 
-      if (currentNode?.element === element && previous !== null) {
+      if (currentNode.element === element && previous !== null) {
         previous.next = currentNode.next
         break
       }
@@ -154,7 +145,7 @@ export class LinkedList<T> {
       return
     }
 
-    while (this.head?.element === element) {
+    while (this.head.element === element) {
       this.head = this.head.next!
       this.length--
     }
@@ -162,17 +153,23 @@ export class LinkedList<T> {
     let list = this.head
     let previous: NodeOrNull<T> = null
 
-    while (list?.next) {
-      if (list?.element !== element) {
+    while (list.next) {
+      if (list.element !== element) {
         previous = list
       }
 
-      if (previous && list?.element === element) {
-        previous.next = list.next
-        this.length--
+      if (previous && list.element === element) {
+        while (list.element === element) {
+          previous.next = list.next
+          this.length--
+          if (list.next) {
+            list = list.next
+          }
+        }
+        break
       }
 
-      list = list.next
+      list = list.next!
     }
 
     if (previous && list?.element === element) {
@@ -194,46 +191,6 @@ export class LinkedList<T> {
       }
     }
     return -1
-  }
-
-  public reverse = () => {
-    if (this.head === null) {
-      return
-    }
-
-    if (this.length <= 1) {
-      return
-    }
-
-    let list = this.head
-    let backupNode: NodeOrNull<T> = null
-    let previousNode: NodeOrNull<T> = null
-
-    while (list) {
-      backupNode = list.next!
-      list.next = previousNode
-      previousNode = list
-      list = backupNode
-    }
-
-    this.head = previousNode
-  }
-
-  public isEmpty = () => !this.length
-
-  public toArray = (): T[] => {
-    const result: T[] = []
-    let node = this.head
-    while (node) {
-      result.push(node.element)
-      node = node.next!
-    }
-    return result
-  }
-
-  public fromArray = (elements: T[]): LinkedList<T> => {
-    elements.forEach((el: T) => this.addToLast(el))
-    return this
   }
 
   public print = () => {
