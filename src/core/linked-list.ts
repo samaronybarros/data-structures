@@ -1,11 +1,4 @@
-import { List } from './list'
-
-interface INode<T> {
-  element: T
-  next: INode<T> | null
-}
-
-type NodeOrNull<T> = INode<T> | null
+import { List, NodeOrNull } from './list'
 
 export class LinkedList<T> extends List<T> {
   public getLength = () => this.length
