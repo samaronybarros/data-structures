@@ -163,4 +163,9 @@ export class SortedList<T> extends List<T> {
       this.length--
     }
   }
+
+  public fromArray = (elements: T[]): SortedList<T> => {
+    elements.forEach((el: T) => this.add(el))
+    return this
+  }
 }
