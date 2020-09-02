@@ -1,3 +1,4 @@
+export { HashTable } from './core/hash-table'
 export { LinkedList } from './core/linked-list'
 export { Queue } from './core/queue'
 export { SortedList } from './core/sorted-list'
