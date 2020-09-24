@@ -1,6 +1,6 @@
 {
-  "name": "data-structure-javascript",
-  "version": "1.0.0",
+  "name": "sb-js-data-structures",
+  "version": "1.0.2",
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com:samaronybarros/data-structures.git"
@@ -13,6 +13,21 @@
   "license": "MIT",
   "main": "bin/src/index.js",
   "types": "bin/src/index.d.ts",
+  "keywords": [
+    "data structure",
+    "linked list",
+    "bst",
+    "binary search tree",
+    "tree",
+    "graph",
+    "edge",
+    "queue",
+    "map",
+    "hash",
+    "hash table",
+    "sorted list",
+    "stack"
+  ],
   "dependencies": {},
   "devDependencies": {
     "@types/mocha": "^8.0.3",
