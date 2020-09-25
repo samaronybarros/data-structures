@@ -81,7 +81,7 @@ list.addToLast(2)
 
 Creates a Linked List, a data structure where each element is a separate object and the elements are linked using pointers.
 
-<img src="./docs/linked-list.png"
+<img src="https://github.com/samaronybarros/data-structures/blob/feature/publish/docs/linked-list.png?raw=true"
      alt="Linked List"
      style="float: left; margin-right: 10px;" />
 
