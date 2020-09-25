@@ -79,6 +79,12 @@ list.addToLast(2)
 
 ### Linked List
 
+Creates a Linked List, a data structure where each element is a separate object and the elements are linked using pointers.
+
+<img src="./docs/linked-list.png"
+     alt="Linked List"
+     style="float: left; margin-right: 10px;" />
+
 #### Initializer
 
 ```typescript
