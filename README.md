@@ -27,6 +27,19 @@ JavaScript Data Structure written in TypeScript
       - [getLength](#getlength)
       - [isEmpty](#isempty)
       - [print](#print)
+  - [Sorted List](#sorted-list)
+    - [Initializer](#initializer)
+    - [Methods](#methods)
+      - [add](#add)
+      - [removeFromLast](#removefromlast)
+      - [removeFromHead](#removefromhead)
+      - [removeFirstElementFoundFromList](#removefirstelementfoundfromlist)
+      - [removeAllElementsFromList](#removeallelementsfromlist)
+      - [fromArray](#fromarray)
+      - [toArray](#toarray)
+      - [getLength](#getlength)
+      - [isEmpty](#isempty)
+      - [print](#print)
 - [License](#license)
 
 <!-- /TOC -->
@@ -232,6 +245,140 @@ public isEmpty(): boolean
 ###### Description
 
 Console log the Linked List elements.
+
+### Sorted List
+
+Creates a Sorted List, a data structure where each element is a separate object, the elements linked using pointers and the elements are sorted.
+
+<img src="https://github.com/samaronybarros/data-structures/blob/feature/publish/docs/sorted-list.png?raw=true"
+     alt="Linked List"
+     style="float: left; margin-right: 10px;" />
+
+#### Initializer
+
+```typescript
+import { SortedList } from 'sb-js-data-structures'
+
+const list = new SortedList()
+```
+
+#### Methods
+
+##### add
+
+```typescript
+public add(element: T): void
+```
+
+###### Parameters
+
+- **element** `T` - The element to be inserted
+
+###### Description
+
+Insert an element to the Sorted List.
+
+##### removeFromLast
+
+```typescript
+public removeFromLast(): void
+```
+
+###### Description
+
+Remove the element on the ending of the Sorted List.
+
+##### removeFromHead
+
+```typescript
+public removeFromHead(): void
+```
+
+###### Description
+
+Remove the element on the beginning of the Sorted List.
+
+##### removeFirstElementFoundFromList
+
+```typescript
+public removeFirstElementFoundFromList(element: T): void
+```
+
+###### Parameters
+
+- **element** `T` - The element to be removed
+
+###### Description
+
+Remove the first element found on the Sorted List.
+
+##### removeAllElementsFromList
+
+```typescript
+public removeAllElementsFromList(element: T): void
+```
+
+###### Parameters
+
+- **element** `T` - The element to be removed
+
+###### Description
+
+Remove all the elements found on the Sorted List.
+
+##### fromArray
+
+```typescript
+public fromArray(element: T[]): void
+```
+
+###### Parameters
+
+- **elements** `T[]` - Array of elements
+
+###### Description
+
+Insert all the `elements` at the ending of the Sorted List.
+
+##### toArray
+
+```typescript
+public toArray(): T[]
+```
+
+###### Description
+
+Create an array with all the elements of the Sorted List.
+
+##### getLength
+
+```typescript
+public getLength(): number
+```
+
+###### Description
+
+Get the length of the Sorted List.
+
+##### isEmpty
+
+```typescript
+public isEmpty(): boolean
+```
+
+###### Returns
+
+- **boolean** - Returns `true` if the Sorted List has no elements, otherwise, returns `false`.
+
+###### Description
+
+Informs if the Sorted List is empty.
+
+##### print
+
+```typescript
+public isEmpty(): boolean
+```
 
 ## License
 
