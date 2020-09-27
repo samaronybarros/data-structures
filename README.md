@@ -56,6 +56,12 @@ JavaScript Data Structure written in TypeScript
       - [peek](#peek)
       - [getLength](#getlength)
       - [isEmpty](#isempty)
+  - [Hash Table](#hash-table)
+    - [Initializer](#initializer)
+    - [Methods](#methods)
+      - [insert](#insert)
+      - [delete](#delete)
+      - [search](#search)
 - [License](#license)
 
 <!-- /TOC -->
@@ -547,6 +553,67 @@ public isEmpty(): boolean
 ###### Description
 
 Informs if the Stack is empty.
+
+### Hash Table
+
+Creates a Hash Table, a data structure that stores in an array format, where each data value has its own unique index value.
+
+<img src="https://github.com/samaronybarros/data-structures/blob/feature/publish/docs/hash-table.png?raw=true"
+     alt="Hash Table"
+     style="float: left; margin-right: 10px;" />
+
+#### Initializer
+
+```typescript
+import { HashTable } from 'sb-js-data-structures'
+
+const hash = new HashTable()
+```
+
+#### Methods
+
+##### insert
+
+```typescript
+public insert(key: string, value: T): void
+```
+
+###### Parameters
+
+- **key** `string` - The key
+- **value** `T` - The value to be inserted
+
+###### Description
+
+Inserts an element in the Hash Table.
+
+##### delete
+
+```typescript
+public delete((key: string)): void
+```
+
+###### Parameters
+
+- **key** `string` - The key
+
+###### Description
+
+Removes an element from the Hash Table.
+
+##### search
+
+```typescript
+public search((key: string)): void
+```
+
+###### Parameters
+
+- **key** `string` - The key
+
+###### Description
+
+Searches an element in a hash table.
 
 ## License
 
