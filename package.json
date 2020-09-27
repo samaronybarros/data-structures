@@ -43,7 +43,7 @@
   },
   "scripts": {
     "prepublish": "yarn build",
-    "start": "yarn build && node bin/index.js",
+    "start": "yarn build && node bin/src/index.js",
     "start:dev": "nodemon",
     "build": "rimraf ./bin && tsc",
     "test": "yarn build && yarn mocha ./bin/src/test/*.test.js"
