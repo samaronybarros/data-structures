@@ -62,6 +62,17 @@ JavaScript Data Structure written in TypeScript
       - [insert](#insert)
       - [delete](#delete)
       - [search](#search)
+  - [Binary Search Tree](#binary-search-tree)
+    - [Initializer](#initializer)
+  - [Interfaces](#interfaces)
+    - [INode](#inode)
+    - [Methods](#methods)
+      - [insert](#insert)
+      - [delete](#delete)
+      - [search](#search)
+      - [getLength](#getlength)
+      - [isEmpty](#isempty)
+      - [fromArray](#fromarray)
 - [License](#license)
 
 <!-- /TOC -->
@@ -240,6 +251,10 @@ Creates an array with all the elements of the Linked List.
 public getLength(): number
 ```
 
+###### Returns
+
+- **number** - Linked List length.
+
 ###### Description
 
 Gets the length of the Linked List.
@@ -378,6 +393,10 @@ Creates an array with all the elements of the Sorted List.
 public getLength(): number
 ```
 
+###### Returns
+
+- **number** - Sorted List length.
+
 ###### Description
 
 Gets the length of the Sorted List.
@@ -460,6 +479,10 @@ Gets the element at the front of the Queue without removing it.
 public getLength(): number
 ```
 
+###### Returns
+
+- **number** - Queue length.
+
 ###### Description
 
 Gets the length of the Queue.
@@ -535,6 +558,10 @@ Gets the last element at the Stack without removing it.
 ```typescript
 public getLength(): number
 ```
+
+###### Returns
+
+- **number** - Stack length.
 
 ###### Description
 
@@ -614,6 +641,124 @@ public search(key: string): void
 ###### Description
 
 Searches an element in a hash table.
+
+### Binary Search Tree
+
+Creates a Binary Search Tree, a last-in-first-out (LIFO) data structure. In a LIFO data structure, the last element added to the tree will be the first one to be removed.
+
+<img src="https://github.com/samaronybarros/data-structures/blob/feature/publish/docs/bst.png?raw=true"
+     alt="Binary Search Tree"
+     style="float: left; margin-right: 10px;" />
+
+#### Initializer
+
+```typescript
+import { BinarySearchTree } from 'sb-js-data-structures'
+
+const tree = new BinarySearchTree()
+```
+
+### Interfaces
+
+#### INode
+
+```typescript
+export interface INode<T> {
+  element: T
+  right: INode<T> | null
+  left: INode<T> | null
+}
+```
+
+#### Methods
+
+##### insert
+
+```typescript
+public insert(element: T): void
+```
+
+###### Parameters
+
+- **element** `T` - The element to be inserted
+
+###### Description
+
+Inserts an element in the Binary Search Tree.
+
+##### delete
+
+```ts
+public delete(element: T): void
+```
+
+###### Parameters
+
+- **element** `T` - The element to be removed
+
+###### Description
+
+Removes an element from the Binary Search Tree.
+
+##### search
+
+```typescript
+public search(element: T): INode
+```
+
+###### Parameters
+
+- **element** `T` - The element to be searched
+
+###### Description
+
+Gets the last element at the Binary Search Tree without removing it.
+
+###### Returns
+
+- **INode** - The node found.
+
+##### getLength
+
+```typescript
+public getLength(): number
+```
+
+###### Returns
+
+- **number** - Binary Search Tree length.
+
+###### Description
+
+Gets the number of elements of the Binary Search Tree.
+
+##### isEmpty
+
+```typescript
+public isEmpty(): boolean
+```
+
+###### Returns
+
+- **boolean** - Returns `true` if the Binary Search Tree has no elements, otherwise, returns `false`.
+
+###### Description
+
+Informs if the Binary Search Tree is empty.
+
+##### fromArray
+
+```typescript
+public fromArray(element: T[]): void
+```
+
+###### Parameters
+
+- **elements** `T[]` - Array of elements
+
+###### Description
+
+Inserts all the `elements` in the Binary Search Tree.
 
 ## License
 
