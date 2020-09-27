@@ -48,6 +48,14 @@ JavaScript Data Structure written in TypeScript
       - [peek](#peek)
       - [getLength](#getlength)
       - [isEmpty](#isempty)
+  - [Stack](#stack)
+    - [Initializer](#initializer)
+    - [Methods](#methods)
+      - [push](#push)
+      - [pop](#pop)
+      - [peek](#peek)
+      - [getLength](#getlength)
+      - [isEmpty](#isempty)
 - [License](#license)
 
 <!-- /TOC -->
@@ -448,7 +456,7 @@ public getLength(): number
 
 ###### Description
 
-Gets the length of the Sorted List.
+Gets the length of the Queue.
 
 ##### isEmpty
 
@@ -463,6 +471,82 @@ public isEmpty(): boolean
 ###### Description
 
 Informs if the Queue is empty.
+
+### Stack
+
+Creates a Stack, a last-in-first-out (LIFO) data structure. In a LIFO data structure, the last element added to the stack will be the first one to be removed.
+
+<img src="https://github.com/samaronybarros/data-structures/blob/feature/publish/docs/stack.png?raw=true"
+     alt="Stack"
+     style="float: left; margin-right: 10px;" />
+
+#### Initializer
+
+```typescript
+import { Stack } from 'sb-js-data-structures'
+
+const stack = new Stack()
+```
+
+#### Methods
+
+##### push
+
+```typescript
+public push(element: T): void
+```
+
+###### Parameters
+
+- **element** `T` - The element to be inserted
+
+###### Description
+
+Inserts an element to the Stack.
+
+##### pop
+
+```typescript
+public pop(): void
+```
+
+###### Description
+
+Removes an element to the Stack.
+
+##### peek
+
+```typescript
+public peek(): void
+```
+
+###### Description
+
+Gets the last element at the Stack without removing it.
+
+##### getLength
+
+```typescript
+public getLength(): number
+```
+
+###### Description
+
+Gets the length of the Stack.
+
+##### isEmpty
+
+```typescript
+public isEmpty(): boolean
+```
+
+###### Returns
+
+- **boolean** - Returns `true` if the Stack has no elements, otherwise, returns `false`.
+
+###### Description
+
+Informs if the Stack is empty.
 
 ## License
 
