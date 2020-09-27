@@ -1,10 +1,33 @@
 {
-  "name": "data-structures",
-  "version": "1.0.0",
-  "main": "index.js",
-  "repository": "git@github.com:samaronybarros/data-structures.git",
+  "name": "sb-js-data-structures",
+  "version": "1.0.4",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:samaronybarros/data-structures.git"
+  },
+  "bugs": {
+    "url": "https://github.com:samaronybarros/data-structures/issues"
+  },
+  "homepage": "https://github.com:samaronybarros/data-structures#readme",
   "author": "Sam Barros <samarony.barros@gmail.com>",
   "license": "MIT",
+  "main": "bin/src/index.js",
+  "types": "bin/src/index.d.ts",
+  "keywords": [
+    "data structure",
+    "linked list",
+    "bst",
+    "binary search tree",
+    "tree",
+    "graph",
+    "edge",
+    "queue",
+    "map",
+    "hash",
+    "hash table",
+    "sorted list",
+    "stack"
+  ],
   "dependencies": {},
   "devDependencies": {
     "@types/mocha": "^8.0.3",
@@ -19,7 +42,8 @@
     "typescript": "^4.0.2"
   },
   "scripts": {
-    "start": "npm run build && node bin/index.js",
+    "prepublish": "yarn build",
+    "start": "yarn build && node bin/index.js",
     "start:dev": "nodemon",
     "build": "rimraf ./bin && tsc",
     "test": "yarn build && yarn mocha ./bin/src/test/*.test.js"
