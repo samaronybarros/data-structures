@@ -64,8 +64,8 @@ JavaScript Data Structure written in TypeScript
       - [search](#search)
   - [Binary Search Tree](#binary-search-tree)
     - [Initializer](#initializer)
-  - [Interfaces](#interfaces)
-    - [INode](#inode)
+    - [Interfaces](#interfaces)
+      - [INode](#inode)
     - [Methods](#methods)
       - [insert](#insert)
       - [delete](#delete)
@@ -658,9 +658,9 @@ import { BinarySearchTree } from 'sb-js-data-structures'
 const tree = new BinarySearchTree()
 ```
 
-### Interfaces
+#### Interfaces
 
-#### INode
+##### INode
 
 ```typescript
 export interface INode<T> {
