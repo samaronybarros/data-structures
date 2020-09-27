@@ -40,6 +40,14 @@ JavaScript Data Structure written in TypeScript
       - [getLength](#getlength)
       - [isEmpty](#isempty)
       - [print](#print)
+  - [Queue](#queue)
+    - [Initializer](#initializer)
+    - [Methods](#methods)
+      - [enqueue](#enqueue)
+      - [dequeue](#dequeue)
+      - [peek](#peek)
+      - [getLength](#getlength)
+      - [isEmpty](#isempty)
 - [License](#license)
 
 <!-- /TOC -->
@@ -99,7 +107,7 @@ public addToLast(element: T): void
 
 ###### Description
 
-Insert an element to the ending of the Linked List.
+Inserts an element to the ending of the Linked List.
 
 ##### addToHead
 
@@ -113,7 +121,7 @@ public addToHead(element: T): void
 
 ###### Description
 
-Insert an element to the beginning of the Linked List.
+Inserts an element to the beginning of the Linked List.
 
 ##### addElementAtPosition
 
@@ -128,7 +136,7 @@ public addElementAtPosition(element: T, position: number): void
 
 ###### Description
 
-Insert an element to a specific position of the Linked List, since `position` is less then the number of elements of the Linked List.
+Inserts an element to a specific position of the Linked List, since `position` is less then the number of elements of the Linked List.
 
 ##### removeFromLast
 
@@ -138,7 +146,7 @@ public removeFromLast(): void
 
 ###### Description
 
-Remove the element on the ending of the Linked List.
+Removes the element on the ending of the Linked List.
 
 ##### removeFromHead
 
@@ -148,7 +156,7 @@ public removeFromHead(): void
 
 ###### Description
 
-Remove the element on the beginning of the Linked List.
+Removes the element on the beginning of the Linked List.
 
 ##### removeFirstElementFoundFromList
 
@@ -162,7 +170,7 @@ public removeFirstElementFoundFromList(element: T): void
 
 ###### Description
 
-Remove the first element found on the Linked List.
+Removes the first element found on the Linked List.
 
 ##### removeAllElementsFromList
 
@@ -176,7 +184,7 @@ public removeAllElementsFromList(element: T): void
 
 ###### Description
 
-Remove all the elements found on the Linked List.
+Removes all the elements found on the Linked List.
 
 ##### reverse
 
@@ -200,7 +208,7 @@ public fromArray(element: T[]): void
 
 ###### Description
 
-Insert all the `elements` at the ending of the Linked List.
+Inserts all the `elements` at the ending of the Linked List.
 
 ##### toArray
 
@@ -210,7 +218,7 @@ public toArray(): T[]
 
 ###### Description
 
-Create an array with all the elements of the Linked List.
+Creates an array with all the elements of the Linked List.
 
 ##### getLength
 
@@ -220,7 +228,7 @@ public getLength(): number
 
 ###### Description
 
-Get the length of the Linked List.
+Gets the length of the Linked List.
 
 ##### isEmpty
 
@@ -251,7 +259,7 @@ Console log the Linked List elements.
 Creates a Sorted List, a data structure where each element is a separate object, the elements linked using pointers and the elements are sorted.
 
 <img src="https://github.com/samaronybarros/data-structures/blob/feature/publish/docs/sorted-list.png?raw=true"
-     alt="Linked List"
+     alt="Sorted List"
      style="float: left; margin-right: 10px;" />
 
 #### Initializer
@@ -276,7 +284,7 @@ public add(element: T): void
 
 ###### Description
 
-Insert an element to the Sorted List.
+Inserts an element to the Sorted List.
 
 ##### removeFromLast
 
@@ -286,7 +294,7 @@ public removeFromLast(): void
 
 ###### Description
 
-Remove the element on the ending of the Sorted List.
+Removes the element on the ending of the Sorted List.
 
 ##### removeFromHead
 
@@ -296,7 +304,7 @@ public removeFromHead(): void
 
 ###### Description
 
-Remove the element on the beginning of the Sorted List.
+Removes the element on the beginning of the Sorted List.
 
 ##### removeFirstElementFoundFromList
 
@@ -310,7 +318,7 @@ public removeFirstElementFoundFromList(element: T): void
 
 ###### Description
 
-Remove the first element found on the Sorted List.
+Removes the first element found on the Sorted List.
 
 ##### removeAllElementsFromList
 
@@ -324,7 +332,7 @@ public removeAllElementsFromList(element: T): void
 
 ###### Description
 
-Remove all the elements found on the Sorted List.
+Removes all the elements found on the Sorted List.
 
 ##### fromArray
 
@@ -338,7 +346,7 @@ public fromArray(element: T[]): void
 
 ###### Description
 
-Insert all the `elements` at the ending of the Sorted List.
+Inserts all the `elements` at the ending of the Sorted List.
 
 ##### toArray
 
@@ -348,7 +356,7 @@ public toArray(): T[]
 
 ###### Description
 
-Create an array with all the elements of the Sorted List.
+Creates an array with all the elements of the Sorted List.
 
 ##### getLength
 
@@ -358,7 +366,7 @@ public getLength(): number
 
 ###### Description
 
-Get the length of the Sorted List.
+Gets the length of the Sorted List.
 
 ##### isEmpty
 
@@ -379,6 +387,82 @@ Informs if the Sorted List is empty.
 ```typescript
 public isEmpty(): boolean
 ```
+
+### Queue
+
+Creates a Queue, a first-in-first-out (FIFO) data structure. In a FIFO data structure, the first element added to the queue will be the first one to be removed.
+
+<img src="https://github.com/samaronybarros/data-structures/blob/feature/publish/docs/queue.png?raw=true"
+     alt="Queue"
+     style="float: left; margin-right: 10px;" />
+
+#### Initializer
+
+```typescript
+import { Queue } from 'sb-js-data-structures'
+
+const queue = new Queue()
+```
+
+#### Methods
+
+##### enqueue
+
+```typescript
+public enqueue(element: T): void
+```
+
+###### Parameters
+
+- **element** `T` - The element to be inserted
+
+###### Description
+
+Inserts an element to the Queue.
+
+##### dequeue
+
+```typescript
+public dequeue(): void
+```
+
+###### Description
+
+Removes an element to the Queue.
+
+##### peek
+
+```typescript
+public peek(): void
+```
+
+###### Description
+
+Gets the element at the front of the Queue without removing it.
+
+##### getLength
+
+```typescript
+public getLength(): number
+```
+
+###### Description
+
+Gets the length of the Sorted List.
+
+##### isEmpty
+
+```typescript
+public isEmpty(): boolean
+```
+
+###### Returns
+
+- **boolean** - Returns `true` if the Queue has no elements, otherwise, returns `false`.
+
+###### Description
+
+Informs if the Queue is empty.
 
 ## License
 
