@@ -106,7 +106,7 @@ list.addToLast(2)
 
 Creates a Linked List, a data structure where each element is a separate object and the elements are linked using pointers.
 
-<img src="https://github.com/samaronybarros/data-structures/blob/feature/publish/docs/linked-list.png?raw=true"
+<img src="https://github.com/samaronybarros/data-structures/blob/develop/docs/linked-list.png?raw=true"
      alt="Linked List"
      style="float: left; margin-right: 10px;" />
 
@@ -287,7 +287,7 @@ Console log the Linked List elements.
 
 Creates a Sorted List, a data structure where each element is a separate object, the elements linked using pointers and the elements are sorted.
 
-<img src="https://github.com/samaronybarros/data-structures/blob/feature/publish/docs/sorted-list.png?raw=true"
+<img src="https://github.com/samaronybarros/data-structures/blob/develop/docs/sorted-list.png?raw=true"
      alt="Sorted List"
      style="float: left; margin-right: 10px;" />
 
@@ -425,7 +425,7 @@ public isEmpty(): boolean
 
 Creates a Queue, a first-in-first-out (FIFO) data structure. In a FIFO data structure, the first element added to the queue will be the first one to be removed.
 
-<img src="https://github.com/samaronybarros/data-structures/blob/feature/publish/docs/queue.png?raw=true"
+<img src="https://github.com/samaronybarros/data-structures/blob/develop/docs/queue.png?raw=true"
      alt="Queue"
      style="float: left; margin-right: 10px;" />
 
@@ -505,7 +505,7 @@ Informs if the Queue is empty.
 
 Creates a Stack, a last-in-first-out (LIFO) data structure. In a LIFO data structure, the last element added to the stack will be the first one to be removed.
 
-<img src="https://github.com/samaronybarros/data-structures/blob/feature/publish/docs/stack.png?raw=true"
+<img src="https://github.com/samaronybarros/data-structures/blob/develop/docs/stack.png?raw=true"
      alt="Stack"
      style="float: left; margin-right: 10px;" />
 
@@ -585,7 +585,7 @@ Informs if the Stack is empty.
 
 Creates a Hash Table, a data structure that stores in an array format, where each data value has its own unique index value.
 
-<img src="https://github.com/samaronybarros/data-structures/blob/feature/publish/docs/hash-table.png?raw=true"
+<img src="https://github.com/samaronybarros/data-structures/blob/develop/docs/hash-table.png?raw=true"
      alt="Hash Table"
      style="float: left; margin-right: 10px;" />
 
@@ -648,7 +648,7 @@ Creates a Binary Search Tree, a last-in-first-out (LIFO) data structure. In a LI
 
 Creates a Binary Search Tree, a data structure that is a tree in which all the nodes follow: (1) The value of the key of the left sub-tree is less than the value of its parent (root) node's key; (2) The value of the key of the right sub-tree is greater than or equal to the value of its parent (root) node's key.
 
-<img src="https://github.com/samaronybarros/data-structures/blob/feature/publish/docs/bst.png?raw=true"
+<img src="https://github.com/samaronybarros/data-structures/blob/develop/docs/bst.png?raw=true"
      alt="Binary Search Tree"
      style="float: left; margin-right: 10px;" />
 
