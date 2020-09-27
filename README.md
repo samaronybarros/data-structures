@@ -646,6 +646,8 @@ Searches an element in a hash table.
 
 Creates a Binary Search Tree, a last-in-first-out (LIFO) data structure. In a LIFO data structure, the last element added to the tree will be the first one to be removed.
 
+Creates a Binary Search Tree, a data structure that is a tree in which all the nodes follow: (1) The value of the key of the left sub-tree is less than the value of its parent (root) node's key; (2) The value of the key of the right sub-tree is greater than or equal to the value of its parent (root) node's key.
+
 <img src="https://github.com/samaronybarros/data-structures/blob/feature/publish/docs/bst.png?raw=true"
      alt="Binary Search Tree"
      style="float: left; margin-right: 10px;" />
