@@ -281,7 +281,7 @@ public isEmpty(): boolean
 
 ###### Description
 
-Console log the Linked List elements.
+Display the Linked List elements.
 
 ### Sorted List
 
