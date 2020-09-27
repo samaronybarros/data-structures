@@ -121,7 +121,7 @@ public addToLast(element: T): void
 
 ###### Description
 
-Inserts an element to the ending of the Linked List.
+Inserts an element in the ending of the Linked List.
 
 ##### addToHead
 
@@ -135,7 +135,7 @@ public addToHead(element: T): void
 
 ###### Description
 
-Inserts an element to the beginning of the Linked List.
+Inserts an element in the beginning of the Linked List.
 
 ##### addElementAtPosition
 
@@ -150,7 +150,7 @@ public addElementAtPosition(element: T, position: number): void
 
 ###### Description
 
-Inserts an element to a specific position of the Linked List, since `position` is less then the number of elements of the Linked List.
+Inserts an element in a specific position of the Linked List, since `position` is less then the number of elements of the Linked List.
 
 ##### removeFromLast
 
@@ -160,7 +160,7 @@ public removeFromLast(): void
 
 ###### Description
 
-Removes the element on the ending of the Linked List.
+Removes the element from the ending of the Linked List.
 
 ##### removeFromHead
 
@@ -170,7 +170,7 @@ public removeFromHead(): void
 
 ###### Description
 
-Removes the element on the beginning of the Linked List.
+Removes the element from the beginning of the Linked List.
 
 ##### removeFirstElementFoundFromList
 
@@ -184,7 +184,7 @@ public removeFirstElementFoundFromList(element: T): void
 
 ###### Description
 
-Removes the first element found on the Linked List.
+Removes the first element found in the Linked List.
 
 ##### removeAllElementsFromList
 
@@ -198,7 +198,7 @@ public removeAllElementsFromList(element: T): void
 
 ###### Description
 
-Removes all the elements found on the Linked List.
+Removes all the elements found in the Linked List.
 
 ##### reverse
 
@@ -298,7 +298,7 @@ public add(element: T): void
 
 ###### Description
 
-Inserts an element to the Sorted List.
+Inserts an element in the Sorted List.
 
 ##### removeFromLast
 
@@ -308,7 +308,7 @@ public removeFromLast(): void
 
 ###### Description
 
-Removes the element on the ending of the Sorted List.
+Removes the element from the ending of the Sorted List.
 
 ##### removeFromHead
 
@@ -318,7 +318,7 @@ public removeFromHead(): void
 
 ###### Description
 
-Removes the element on the beginning of the Sorted List.
+Removes the element from the beginning of the Sorted List.
 
 ##### removeFirstElementFoundFromList
 
@@ -332,7 +332,7 @@ public removeFirstElementFoundFromList(element: T): void
 
 ###### Description
 
-Removes the first element found on the Sorted List.
+Removes the first element found in the Sorted List.
 
 ##### removeAllElementsFromList
 
@@ -346,7 +346,7 @@ public removeAllElementsFromList(element: T): void
 
 ###### Description
 
-Removes all the elements found on the Sorted List.
+Removes all the elements found in the Sorted List.
 
 ##### fromArray
 
@@ -432,7 +432,7 @@ public enqueue(element: T): void
 
 ###### Description
 
-Inserts an element to the Queue.
+Inserts an element in the Queue.
 
 ##### dequeue
 
@@ -442,7 +442,7 @@ public dequeue(): void
 
 ###### Description
 
-Removes an element to the Queue.
+Removes an element from the Queue.
 
 ##### peek
 
@@ -508,7 +508,7 @@ public push(element: T): void
 
 ###### Description
 
-Inserts an element to the Stack.
+Inserts an element in the Stack.
 
 ##### pop
 
@@ -518,7 +518,7 @@ public pop(): void
 
 ###### Description
 
-Removes an element to the Stack.
+Removes an element from the Stack.
 
 ##### peek
 
@@ -590,7 +590,7 @@ Inserts an element in the Hash Table.
 ##### delete
 
 ```typescript
-public delete((key: string)): void
+public delete(key: string): void
 ```
 
 ###### Parameters
@@ -604,7 +604,7 @@ Removes an element from the Hash Table.
 ##### search
 
 ```typescript
-public search((key: string)): void
+public search(key: string): void
 ```
 
 ###### Parameters
