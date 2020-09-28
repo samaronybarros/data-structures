@@ -17,7 +17,7 @@ export class List<T> {
 
   public isEmpty = () => !this.length
 
-  public search = (element) => {
+  public search = (element: T) => {
     let list = this.head
     if (list !== null) {
       let position = 0

@@ -125,6 +125,13 @@ export class DoublyLinkedList<T> {
       let list = this.head
       let previous: NodeOrNull<T> = null
 
+      if (list?.element === element) {
+        this.head = list.next!
+        list.previous = null
+        this.length--
+        return
+      }
+
       while (list?.next) {
         let currentNode = list
         if (currentNode?.element !== element) {
@@ -135,10 +142,16 @@ export class DoublyLinkedList<T> {
           previous.next = currentNode.next
           currentNode.next!.previous = previous
           this.length--
-          break
+          return
         }
 
         list = list.next
+      }
+
+      if (list?.element === element) {
+        list.previous = null
+        previous!.next = list.next
+        this.length--
       }
     }
   }
@@ -150,6 +163,12 @@ export class DoublyLinkedList<T> {
       let list = this.head
       let previous: NodeOrNull<T> = null
 
+      if (list?.element === element) {
+        this.head = list.next!
+        list.previous = null
+        this.length--
+      }
+
       while (list?.next) {
         let currentNode = list
         if (currentNode?.element !== element) {
@@ -165,8 +184,9 @@ export class DoublyLinkedList<T> {
         list = list.next
       }
 
-      if (previous && list?.element === element) {
-        previous.next = list.next
+      if (list?.element === element) {
+        list.previous = null
+        previous!.next = list.next
         this.length--
       }
     }
@@ -203,5 +223,25 @@ export class DoublyLinkedList<T> {
 
       process.stdout.write(`${node?.element}\n`)
     }
+  }
+
+  public search = (element: T) => {
+    let list = this.head
+    if (list !== null) {
+      let position = 0
+      while (list) {
+        if (list.element === element) {
+          return position
+        }
+        position++
+        list = list.next!
+      }
+    }
+    return -1
+  }
+
+  public fromArray = (elements: T[]): DoublyLinkedList<T> => {
+    elements.forEach((el: T) => this.insertToTail(el))
+    return this
   }
 }
