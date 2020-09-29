@@ -37,7 +37,7 @@ export class LinkedList<T> extends List<T> {
   public addElementAtPosition = (element: T, position: number) => {
     let previous
 
-    if (position > this.length) {
+    if (position > this.length || position < 0) {
       return
     }
 

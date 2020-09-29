@@ -1,6 +1,6 @@
 {
   "name": "sb-js-data-structures",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com:samaronybarros/data-structures.git"
@@ -43,7 +43,7 @@
   },
   "scripts": {
     "prepublish": "yarn build",
-    "start": "yarn build && node bin/index.js",
+    "start": "yarn build && node bin/src/index.js",
     "start:dev": "nodemon",
     "build": "rimraf ./bin && tsc",
     "test": "yarn build && yarn mocha ./bin/src/test/*.test.js"

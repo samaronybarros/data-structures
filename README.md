@@ -40,6 +40,22 @@ JavaScript Data Structure written in TypeScript
       - [getLength](#getlength)
       - [isEmpty](#isempty)
       - [print](#print)
+  - [Doubly Linked List](#doubly-linked-list)
+    - [Initializer](#initializer)
+    - [Methods](#methods)
+      - [insertToHead](#inserttohead)
+      - [insertToTail](#inserttotail)
+      - [insertAtPosition](#insertatposition)
+      - [deleteFromHead](#deletefromhead)
+      - [deleteFromTail](#deletefromtail)
+      - [deleteFirstFound](#deletefirstfound)
+      - [deleteAllFound](#deleteallfound)
+      - [displayForward](#displayforward)
+      - [displayBackward](#displaybackward)
+      - [search](#search)
+      - [fromArray](#fromarray)
+      - [getLength](#getlength)
+      - [isEmpty](#isempty)
   - [Queue](#queue)
     - [Initializer](#initializer)
     - [Methods](#methods)
@@ -281,7 +297,7 @@ public isEmpty(): boolean
 
 ###### Description
 
-Console log the Linked List elements.
+Display the Linked List elements.
 
 ### Sorted List
 
@@ -420,6 +436,195 @@ Informs if the Sorted List is empty.
 ```typescript
 public isEmpty(): boolean
 ```
+
+### Doubly Linked List
+
+Creates a Doubly Linked List, a data structure where each element is a separate object and the elements linked using pointers to the next and the previous node.
+
+<img src="https://github.com/samaronybarros/data-structures/blob/develop/docs/doubly-linked-list.png?raw=true"
+     alt="Doubly Linked List"
+     style="float: left; margin-right: 10px;" />
+
+#### Initializer
+
+```typescript
+import { DoublyLinkedList } from 'sb-js-data-structures'
+
+const list = new DoublyLinkedList()
+```
+
+#### Methods
+
+##### insertToHead
+
+```typescript
+public insertToHead(element: T): void
+```
+
+###### Parameters
+
+- **element** `T` - The element to be inserted
+
+###### Description
+
+Inserts an element in the beginning of the Doubly Linked List.
+
+##### insertToTail
+
+```typescript
+public insertToTail(element: T): void
+```
+
+###### Parameters
+
+- **element** `T` - The element to be inserted
+
+###### Description
+
+Inserts an element in the ending of the Doubly Linked List.
+
+##### insertAtPosition
+
+```typescript
+public insertAtPosition(element: T, position: number): void
+```
+
+###### Parameters
+
+- **element** `T` - The element to be inserted
+- **position** `number` - position where the element should be inserted
+
+###### Description
+
+Inserts an element in a specific position of the Doubly Linked List, since `position` is less than the number of elements of the Doubly Linked List.
+
+##### deleteFromHead
+
+```typescript
+public deleteFromHead(): void
+```
+
+###### Description
+
+Deletes an element in the beginning of the Doubly Linked List.
+
+##### deleteFromTail
+
+```typescript
+public deleteFromTail(): void
+```
+
+###### Description
+
+Deletes an element in the ending of the Doubly Linked List.
+
+##### deleteFirstFound
+
+```typescript
+public deleteFirstFound(element: T): void
+```
+
+###### Parameters
+
+- **element** `T` - The element to be deleted
+
+###### Description
+
+Deletes the `element` found in the Doubly Linked List.
+
+##### deleteAllFound
+
+```typescript
+public deleteAllFound(element: T): void
+```
+
+###### Parameters
+
+- **element** `T` - The element to be deleted
+
+###### Description
+
+Deletes all the `element`s found in the Doubly Linked List.
+
+##### displayForward
+
+```typescript
+public displayForward(): void
+```
+
+###### Description
+
+Displays all elements in the Doubly Linked List from the **first** to the **last** element.
+
+##### displayBackward
+
+```typescript
+public displayBackward(): void
+```
+
+###### Description
+
+Displays all elements in the Doubly Linked List from the **last** to the **first** element.
+
+##### search
+
+```typescript
+public search(element: T): number
+```
+
+###### Parameters
+
+- **element** `T` - The element to be searched
+
+###### Returns
+
+- **number** - returns the position found or -1 if the element doesn't exist on the list.
+
+###### Description
+
+Searches the `element` in the Doubly Linked List.
+
+##### fromArray
+
+```typescript
+public fromArray(element: T[]): void
+```
+
+###### Parameters
+
+- **elements** `T[]` - Array of elements
+
+###### Description
+
+Inserts all the `elements` at the ending of the Doubly Linked List.
+
+##### getLength
+
+```typescript
+public getLength(): number
+```
+
+###### Returns
+
+- **number** - Doubly Linked List length.
+
+###### Description
+
+Gets the length of the Doubly Linked List.
+
+##### isEmpty
+
+```typescript
+public isEmpty(): boolean
+```
+
+###### Returns
+
+- **boolean** - Returns `true` if the Doubly Linked List has no elements, otherwise, returns `false`.
+
+###### Description
+
+Informs if the Doubly Linked List is empty.
 
 ### Queue
 

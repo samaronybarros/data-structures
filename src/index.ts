@@ -1,4 +1,5 @@
 export { BinarySearchTree } from './core/binary-search-tree'
+export { DoublyLinkedList } from './core/doubly-linked-list'
 export { HashTable } from './core/hash-table'
 export { LinkedList } from './core/linked-list'
 export { Queue } from './core/queue'
